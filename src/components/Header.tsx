@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X, Phone } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,22 +14,27 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="flex flex-col items-center">
-            <span className="text-2xl md:text-3xl font-bold text-red-600">PLAYCENTER</span>
-            <span className="text-lg md:text-xl font-medium text-green-600">UNIVERSAL</span>
-          </div>
+          <a href="#inicio" className="flex items-center">
+            <img
+              src="/Playlogo.png"
+              alt="PlayCenter Universal"
+              className={`w-auto transition-all duration-300 ${
+                isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"
+              }`}
+            />
+          </a>
         </div>
 
         {/* Phone Number (Desktop) */}
@@ -40,19 +45,23 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['Inicio', 'Nosotros', 'Planes', 'Beneficios', 'Contacto'].map((item) => (
-            <a 
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className={`font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-blue-600 hover:text-blue-800' : 'text-gray-800 hover:text-blue-600'
-              }`}
-            >
-              {item}
-            </a>
-          ))}
+          {["Inicio", "Nosotros", "Planes", "Beneficios", "Contacto"].map(
+            (item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className={`font-medium transition-colors duration-300 ${
+                  isScrolled
+                    ? "text-blue-600 hover:text-blue-800"
+                    : "text-gray-800 hover:text-blue-600"
+                }`}
+              >
+                {item}
+              </a>
+            )
+          )}
           <a
-            href="#contacto" 
+            href="#contacto"
             className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors duration-300"
           >
             Contáctanos
@@ -60,7 +69,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-gray-800 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -77,19 +86,21 @@ const Header = () => {
               <Phone className="h-5 w-5 text-green-600 mr-2" />
               <span className="font-medium text-gray-800">809-582-1212</span>
             </div>
-            
-            {['Inicio', 'Nosotros', 'Planes', 'Beneficios', 'Contacto'].map((item) => (
-              <a 
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
+
+            {["Inicio", "Nosotros", "Planes", "Beneficios", "Contacto"].map(
+              (item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              )
+            )}
             <a
-              href="#contacto" 
+              href="#contacto"
               className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
