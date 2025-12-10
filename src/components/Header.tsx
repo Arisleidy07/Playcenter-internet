@@ -31,7 +31,7 @@ const Header = () => {
               src="/Playlogo.png"
               alt="PlayCenter Universal"
               className={`w-auto transition-all duration-300 ${
-                isScrolled ? "h-10 md:h-12" : "h-12 md:h-16"
+                isScrolled ? "h-8 md:h-10" : "h-10 md:h-12"
               }`}
             />
           </a>
