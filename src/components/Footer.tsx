@@ -117,20 +117,18 @@ const Footer = () => {
               </li>
               <li className="flex justify-between">
                 <span>Lunes - Viernes:</span>
-                <span>8:00 AM - 8:00 PM</span>
+                <span>8:30am - 5:30pm</span>
               </li>
               <li className="flex justify-between">
                 <span>Sábados:</span>
-                <span>9:00 AM - 5:00 PM</span>
+                <span>8:30am - 12:30pm</span>
               </li>
               <li className="flex justify-between">
                 <span>Domingos:</span>
-                <span>10:00 AM - 2:00 PM</span>
+                <span>Cerrado</span>
               </li>
-              <li className="mt-4">
-                <span className="text-blue-400">Soporte Técnico:</span>
-                <span className="block mt-1">24/7 Todos los días</span>
-              </li>
+
+
             </ul>
           </div>
         </div>

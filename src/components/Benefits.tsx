@@ -10,9 +10,9 @@ import {
 const benefits = [
   {
     icon: <Clock className="h-10 w-10 text-blue-600" />,
-    title: "Soporte 24/7",
+    title: "Soporte técnico rápido y eficiente",
     description:
-      "Nuestro equipo técnico está disponible todos los días del año para resolver cualquier incidencia.",
+      "Nuestro equipo técnico está disponible para resolver cualquier incidencia.",
   },
   {
     icon: <Zap className="h-10 w-10 text-blue-600" />,
